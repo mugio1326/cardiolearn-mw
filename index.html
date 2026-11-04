@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#a71930">
+<title>CARDIOLEARN | Sistem Peredaran Darah Manusia</title>
+<style>
+#musicButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: #16845b;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#musicButton:hover {
+    background: #116b49;
+    transform: scale(1.05);
+}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--red:#b4233c;--red2:#e34b60;--navy:#142b45;--blue:#2b78a8;--ink:#233348;--muted:#718096;--cream:#fff9f7;--line:#f0e5e3;--green:#198765;--shadow:0 18px 50px rgba(50,35,45,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fffdfc;color:var(--ink);font-family:'DM Sans',sans-serif}button{font:inherit;cursor:pointer}a{color:inherit;text-decoration:none}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navwrap{max-width:1180px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font-family:Manrope,sans-serif;font-weight:800;font-size:1.18rem;letter-spacing:.4px;color:var(--navy)}
+.brandmark{width:39px;height:39px;border-radius:13px;background:linear-gradient(145deg,var(--red2),var(--red));display:grid;place-items:center;color:white;font-size:21px;box-shadow:0 7px 17px #b4233c40}
+nav{display:flex;gap:4px;align-items:center;flex-wrap:wrap}.navbtn{border:0;background:transparent;color:#657184;padding:10px 12px;border-radius:11px;font-weight:700;font-size:.88rem;transition:.2s}.navbtn:hover,.navbtn.active{background:#fff0f1;color:var(--red)}
+.container{max-width:1120px;margin:auto;padding:0 22px}.page{display:none;animation:fade .35s ease}.page.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.hero{margin:35px auto 28px;min-height:390px;border-radius:30px;overflow:hidden;position:relative;background:radial-gradient(circle at 82% 20%,#ff9ca7 0,transparent 28%),linear-gradient(120deg,#142b45 0%,#263f5d 55%,#8e263b 100%);color:#fff;padding:55px 55px;display:flex;align-items:center}
+.hero:after{content:"";position:absolute;width:390px;height:390px;border:1px solid #ffffff26;border-radius:50%;right:5%;top:0;box-shadow:0 0 0 35px #ffffff08,0 0 0 75px #ffffff06}
+.hero-copy{max-width:590px;position:relative;z-index:2}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#ffffff1c;border:1px solid #ffffff35;padding:8px 13px;border-radius:30px;font-size:.78rem;font-weight:700;letter-spacing:.7px;text-transform:uppercase}
+.hero h1{font:800 clamp(2.5rem,6vw,4.3rem)/1.05 Manrope,sans-serif;margin:19px 0 14px;letter-spacing:-2px}.hero h1 span{color:#ff9eaa}.hero p{font-size:1.05rem;line-height:1.8;color:#e3eaf0;max-width:540px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{border:0;border-radius:13px;padding:13px 19px;font-weight:800;transition:.2s;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn:hover{transform:translateY(-2px);filter:brightness(1.04)}.btn-primary{background:var(--red);color:white;box-shadow:0 8px 20px #b4233c35}.btn-light{background:#fff;color:var(--navy)}.btn-outline{background:white;border:1px solid var(--line);color:var(--ink)}.btn-small{padding:9px 13px;font-size:.85rem}
+.hero-art{position:absolute;right:8%;z-index:1;width:270px;height:270px;border-radius:50%;background:linear-gradient(145deg,#ffffff25,#ffffff08);border:1px solid #ffffff45;display:grid;place-items:center;font-size:150px;filter:drop-shadow(0 20px 22px #0003)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin:35px 0 18px}.section-head h2{font:800 1.65rem Manrope;margin:0;color:var(--navy)}.section-head p{margin:6px 0 0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 7px 25px #35252b08;transition:.22s}.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.iconbox{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:#fff0f1;font-size:24px;margin-bottom:15px}.card h3{margin:0 0 8px;font:800 1.08rem Manrope;color:var(--navy)}.card p{margin:0;color:var(--muted);line-height:1.65;font-size:.93rem}.card .textlink{display:inline-block;margin-top:16px;color:var(--red);font-weight:800;font-size:.9rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:25px 0 38px}.stat{padding:17px 20px;border-radius:17px;background:#fff7f5;border:1px solid #f8e7e5}.stat strong{display:block;color:var(--red);font:800 1.5rem Manrope}.stat span{font-size:.85rem;color:var(--muted)}
+.page-title{padding:43px 0 15px}.page-title .kicker{color:var(--red);font-weight:800;text-transform:uppercase;letter-spacing:1px;font-size:.76rem}.page-title h1{font:800 clamp(2rem,4vw,3rem) Manrope;color:var(--navy);margin:9px 0}.page-title p{color:var(--muted);line-height:1.7;max-width:720px;margin:0}
+.contentbox{background:white;border:1px solid var(--line);border-radius:22px;padding:25px;margin:18px 0;box-shadow:0 7px 25px #35252b07}.contentbox h2,.contentbox h3{font-family:Manrope;color:var(--navy);margin-top:0}.contentbox p,.contentbox li{line-height:1.75;color:#5d6a7a}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.topic-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.topic{line-height:1.65}.topic p{font-size:.91rem;color:#667486;margin:8px 0 0}.topic ul{padding-left:19px;margin:8px 0 0}.topic li{font-size:.9rem;color:#667486;margin:4px 0}.flow-animation{background:linear-gradient(135deg,#f4f9fc,#fff5f5);border:1px solid #e4edf1;border-radius:18px;padding:10px;margin:12px 0}.flow-animation svg{width:100%;height:auto;display:block}.flow-animation .route{fill:none;stroke:#b7cbd5;stroke-width:8;stroke-linecap:round;stroke-dasharray:10 10}.flow-animation .moving{fill:#e34b60;stroke:#fff;stroke-width:3}.flow-animation .moving.blue{fill:#3188bd}.flow-animation text{font:700 14px 'DM Sans',sans-serif;fill:#263b50}.flow-animation .organ{fill:#fff;stroke:#d9a0a6;stroke-width:2}.flow-animation .organ.blue{stroke:#82b8d5}.sim-caption{font-size:.82rem;color:#718096;text-align:center;margin:0 0 5px}.topic{border:1px solid var(--line);border-radius:15px;padding:16px;background:#fffdfc}.topic b{display:block;color:var(--navy);margin-bottom:5px}.topic span{font-size:.9rem;color:var(--muted);line-height:1.55}
+.video-frame{background:linear-gradient(135deg,#142b45,#7d263a);border-radius:19px;min-height:250px;display:grid;place-items:center;text-align:center;color:white;padding:30px}.play{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--red);font-size:25px;margin:0 auto 15px}.video-frame p{color:#e5eaf0}
+.sim-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px}.flow-visual{background:#f7fbfd;border:1px solid #e4eff4;border-radius:20px;padding:22px;text-align:center}.flow-node{display:inline-block;background:white;border:2px solid #dce8ed;border-radius:12px;padding:12px 14px;font-weight:800;color:var(--navy);margin:6px;min-width:125px}.flow-node.blue{border-color:#75b7dc}.flow-node.red{border-color:#ed929b}.flow-arrow{font-size:22px;color:var(--red);font-weight:800}.flow-step{background:#fff;border-radius:13px;padding:15px;margin-top:12px;text-align:left;line-height:1.65;color:#5d6a7a}.flow-step strong{color:var(--navy)}
+.game-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.game-card{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:white;box-shadow:0 7px 25px #35252b08}.game-cover{padding:26px;text-align:center;font-size:52px;background:linear-gradient(135deg,#fff0f1,#f1f8fc)}.game-body{padding:19px}.game-body h3{font:800 1.05rem Manrope;color:var(--navy);margin:0 0 8px}.game-body p{color:var(--muted);font-size:.9rem;line-height:1.6;min-height:68px;margin:0 0 15px}
+.game-panel{display:none;margin-top:20px}.game-panel.show{display:block}.game-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.score-pill{background:#fff0f1;color:var(--red);padding:9px 13px;border-radius:30px;font-weight:800}.drag-list,.drop-list{display:grid;gap:9px;margin-top:14px}.drag-item,.drop-slot{padding:13px 15px;border-radius:12px;border:1px dashed #d8c8ca;background:#fffafa;font-weight:700}.drag-item{cursor:grab;background:#fff;display:flex;justify-content:space-between;align-items:center}.drag-item:active{cursor:grabbing}.drop-slot{min-height:48px;color:#8994a2}.drop-slot.filled{border-style:solid;border-color:#e8a0a8;background:#fff2f3;color:var(--navy)}.drop-slot.over{background:#f0f8fc;border-color:var(--blue)}.game-columns{display:grid;grid-template-columns:1fr 1fr;gap:18px}.match-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center;margin:10px 0}.match-row select,.answer-select{width:100%;padding:12px;border:1px solid #e6dfe0;border-radius:11px;background:#fff;color:var(--ink);font:inherit}
+.question{padding:18px;border:1px solid var(--line);border-radius:15px;margin:12px 0;background:#fff}.question b{display:block;margin-bottom:12px;color:var(--navy)}.option{display:block;padding:9px 11px;border-radius:9px;margin:6px 0;background:#faf7f7;cursor:pointer}.option:hover{background:#fff0f1}.feedback{padding:13px;border-radius:12px;margin-top:12px;font-weight:700;display:none}.feedback.good{display:block;background:#eaf8f2;color:#177653}.feedback.bad{display:block;background:#fff0f1;color:#b4233c}
+.progressbar{height:9px;background:#f3e9e9;border-radius:20px;overflow:hidden;margin:12px 0}.progressbar span{display:block;height:100%;background:linear-gradient(90deg,var(--red),#f18b92);width:0;transition:.3s}
+footer{margin-top:55px;background:#142b45;color:#dce5ed;padding:27px 22px;text-align:center;font-size:.88rem}footer b{color:white}
+.notice{background:#fff8e9;border:1px solid #f4e4bc;padding:14px 16px;border-radius:13px;color:#78633c;font-size:.9rem;line-height:1.6}
+@media(max-width:850px){.navwrap{align-items:flex-start;flex-direction:column}.hero{padding:38px 30px}.hero-art{right:-35px;opacity:.35}.grid,.game-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){nav{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px}.navbtn{white-space:nowrap}.hero{min-height:390px;padding:32px 23px}.hero-art{width:190px;height:190px;font-size:105px;top:180px;right:-20px}.hero-copy{max-width:100%}.grid,.game-grid,.two-col,.sim-layout,.game-columns,.topic-list{grid-template-columns:1fr}.stats{gap:8px}.stat{padding:13px}.stat strong{font-size:1.2rem}.container{padding:0 16px}.section-head{align-items:flex-start;flex-direction:column}}
+.developer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 25px auto;
+}
+
+.developer-card {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.developer-card img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #16845b;
+}
+
+.developer-card h3 {
+    color: #142b45;
+    margin: 12px 0 5px;
+}
+
+.developer-card p {
+    color: #666;
+    font-size: 13px;
+}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="navwrap">
+<a class="brand" href="#" onclick="showPage('home');return false"><span class="brandmark">♥</span> CARDIOLEARN</a>
+<nav aria-label="Navigasi utama">
+<button class="navbtn active" data-page="home" onclick="showPage('home')">Beranda</button>
+<button class="navbtn" data-page="materi" onclick="showPage('materi')">Materi</button>
+<button class="navbtn" data-page="video" onclick="showPage('video')">Video</button>
+<button class="navbtn" data-page="simulasi" onclick="showPage('simulasi')">Simulasi</button>
+<button class="navbtn" data-page="aktivitas" onclick="showPage('aktivitas')">Aktivitas</button>
+<button class="navbtn" data-page="evaluasi" onclick="showPage('evaluasi')">Evaluasi</button>
+<button class="navbtn" data-page="profil" onclick="showPage('profil')">Profil</button>
+</nav></div></header>
+
+<main class="container">
+<section id="home" class="page active">
+<div class="hero"><div class="hero-copy">
+<span class="eyebrow">✦ Media Pembelajaran Biologi Kelas XI</span>
+<h1>Kenali Aliran<br><span>Kehidupan.</span></h1>
+<p>Jelajahi sistem peredaran darah manusia melalui materi ringkas, video, simulasi, permainan edukatif, dan evaluasi interaktif.</p>
+<div class="actions"><button class="btn btn-light" onclick="showPage('materi')">Mulai Belajar <span>→</span></button><button class="btn" style="background:#ffffff20;color:white;border:1px solid #ffffff55" onclick="showPage('aktivitas')">Mainkan Game</button></div>
+</div><div class="hero-art" aria-hidden="true">♥</div></div>
+<div class="section-head"><div><h2>Selamat datang di CARDIOLEARN!</h2><p>Belajar sistem peredaran darah dengan cara yang lebih menyenangkan.</p></div></div>
+<div class="grid">
+<div class="card"><div class="iconbox">📖</div><h3>Materi Terarah</h3><p>Pelajari komponen darah, jantung, pembuluh darah, dan mekanisme peredaran darah.</p><a class="textlink" href="#" onclick="showPage('materi');return false">Buka materi →</a></div>
+<div class="card"><div class="iconbox">🫀</div><h3>Simulasi Aliran Darah</h3><p>Ikuti perjalanan darah melalui jantung, paru-paru, dan seluruh tubuh.</p><a class="textlink" href="#" onclick="showPage('simulasi');return false">Coba simulasi →</a></div>
+<div class="card"><div class="iconbox">🎮</div><h3>Game Edukasi</h3><p>Uji pemahaman dengan tantangan menyusun aliran darah, mengenali jantung, dan mencocokkan komponen darah.</p><a class="textlink" href="#" onclick="showPage('aktivitas');return false">Masuk Game Center →</a></div>
+</div>
+<div class="stats"><div class="stat"><strong>7 Menu</strong><span>Ruang belajar terintegrasi</span></div><div class="stat"><strong>3 Game</strong><span>Tantangan edukatif</span></div><div class="stat"><strong>Interaktif</strong><span>Belajar sambil mencoba</span></div></div>
+</section>
+
+<section id="materi" class="page">
+<div class="page-title"><span class="kicker">Ruang Belajar</span><h1>Materi Pembelajaran</h1><p>Pelajari bagian-bagian utama sistem peredaran darah manusia. Baca setiap topik secara berurutan, lalu lanjutkan dengan simulasi dan aktivitas.</p></div>
+<div class="contentbox"><h2>Tujuan Pembelajaran</h2><p>Setelah mempelajari materi, peserta didik diharapkan mampu menjelaskan komponen sistem peredaran darah, mengidentifikasi struktur dan fungsi jantung serta pembuluh darah, menjelaskan mekanisme peredaran darah kecil dan besar, serta mengaitkan gangguan sistem peredaran darah dengan upaya menjaga kesehatan.</p></div>
+<div class="contentbox"><h2>Gambaran Umum</h2>
+<p>Sistem peredaran darah adalah sistem transportasi dalam tubuh yang mengalirkan darah dari jantung ke seluruh jaringan dan kembali lagi ke jantung. Darah mengangkut oksigen, zat makanan, hormon, serta membawa karbon dioksida dan sisa metabolisme untuk dikeluarkan. Sistem ini bekerja terus-menerus agar sel-sel tubuh memperoleh kebutuhan yang cukup.</p>
+<p>Manusia memiliki sistem peredaran darah tertutup karena darah selalu berada di dalam pembuluh darah, dan peredaran darah ganda karena dalam satu putaran lengkap darah melewati jantung dua kali: melalui peredaran darah kecil dan peredaran darah besar.</p></div>
+<div class="topic-list">
+<div class="topic"><b>01. Fungsi Sistem Peredaran Darah</b><span>Mengangkut oksigen dan nutrisi, membawa hormon, mengedarkan sel pertahanan tubuh, membantu mengatur suhu dan keseimbangan cairan, serta mengangkut karbon dioksida dan sisa metabolisme.</span><p><b>Contoh:</b> Setelah makan, zat gizi diserap dari usus dan diangkut oleh darah menuju sel-sel tubuh. Saat berolahraga, aliran darah meningkat untuk memasok oksigen ke otot.</p></div>
+<div class="topic"><b>02. Komponen Darah</b><span>Darah terdiri atas plasma darah dan unsur berbentuk, yaitu eritrosit, leukosit, dan trombosit.</span><ul><li><b>Plasma:</b> bagian cair darah yang mengangkut nutrisi, hormon, protein, dan zat terlarut.</li><li><b>Eritrosit:</b> sel darah merah yang mengandung hemoglobin untuk mengikat dan mengangkut oksigen.</li><li><b>Leukosit:</b> sel darah putih yang membantu melawan kuman dan benda asing.</li><li><b>Trombosit:</b> keping darah yang berperan dalam proses pembekuan saat terjadi luka.</li></ul></div>
+<div class="topic"><b>03. Struktur dan Fungsi Jantung</b><span>Jantung adalah organ berotot yang memompa darah. Jantung memiliki empat ruang: serambi (atrium) kanan dan kiri serta bilik (ventrikel) kanan dan kiri.</span><ul><li>Serambi kanan menerima darah dari seluruh tubuh.</li><li>Bilik kanan memompa darah menuju paru-paru.</li><li>Serambi kiri menerima darah dari paru-paru.</li><li>Bilik kiri memompa darah ke seluruh tubuh melalui aorta.</li></ul><p>Katup jantung menjaga darah mengalir satu arah dan mencegah aliran balik. Dinding bilik kiri lebih tebal karena harus memompa darah ke seluruh tubuh.</p></div>
+<div class="topic"><b>04. Pembuluh Darah</b><span>Pembuluh darah menjadi jalur yang menghubungkan jantung dengan jaringan tubuh.</span><ul><li><b>Arteri:</b> membawa darah keluar dari jantung; dindingnya relatif tebal dan elastis.</li><li><b>Vena:</b> membawa darah menuju jantung; banyak vena memiliki katup untuk membantu mencegah aliran balik.</li><li><b>Kapiler:</b> pembuluh sangat kecil berdinding tipis, tempat pertukaran oksigen, karbon dioksida, nutrisi, dan sisa metabolisme.</li></ul><p>Nama arteri dan vena ditentukan oleh arah aliran terhadap jantung, bukan semata-mata kadar oksigennya.</p></div>
+<div class="topic"><b>05. Peredaran Darah Kecil (Pulmonal)</b><span>Peredaran darah kecil membawa darah dari jantung ke paru-paru untuk pertukaran gas, lalu kembali ke jantung.</span><p><b>Urutan:</b> bilik kanan → arteri pulmonalis → kapiler paru-paru → vena pulmonalis → serambi kiri.</p><p>Di kapiler paru-paru, darah melepaskan karbon dioksida dan mengambil oksigen. Perlu diingat: arteri pulmonalis membawa darah miskin oksigen, sedangkan vena pulmonalis membawa darah kaya oksigen.</p></div>
+<div class="topic"><b>06. Peredaran Darah Besar (Sistemik)</b><span>Peredaran darah besar mengalirkan darah kaya oksigen dari jantung ke seluruh tubuh, kemudian mengembalikan darah ke jantung.</span><p><b>Urutan:</b> bilik kiri → aorta → arteri → kapiler jaringan tubuh → vena → vena kava → serambi kanan.</p><p>Di kapiler jaringan, oksigen dan nutrisi berpindah ke sel. Karbon dioksida dan sisa metabolisme dari sel masuk ke darah untuk diangkut.</p></div>
+<div class="topic"><b>07. Denyut Jantung dan Tekanan Darah</b><span>Jantung bekerja melalui fase kontraksi (sistol) dan relaksasi (diastol). Sistol mendorong darah keluar dari ruang jantung, sedangkan diastol memungkinkan ruang jantung terisi kembali.</span><p>Tekanan darah menunjukkan tekanan darah pada dinding arteri. Pengukuran biasanya ditulis dalam dua angka: sistolik/diastolik. Aktivitas fisik, emosi, kondisi kesehatan, dan usia dapat memengaruhi denyut jantung serta tekanan darah.</p></div>
+<div class="topic"><b>08. Gangguan Sistem Peredaran Darah</b><span>Beberapa gangguan yang dapat memengaruhi fungsi darah, jantung, atau pembuluh darah.</span><ul><li><b>Anemia:</b> kondisi ketika kemampuan darah membawa oksigen berkurang, misalnya karena kadar hemoglobin rendah.</li><li><b>Hipertensi:</b> tekanan darah yang terus-menerus tinggi.</li><li><b>Aterosklerosis:</b> penumpukan plak pada dinding arteri yang dapat menyempitkan pembuluh.</li><li><b>Penyakit jantung koroner:</b> gangguan aliran darah pada pembuluh koroner yang memasok otot jantung.</li><li><b>Stroke:</b> gangguan aliran darah ke bagian otak atau perdarahan di otak.</li></ul></div>
+<div class="topic"><b>09. Menjaga Kesehatan Peredaran Darah</b><span>Kebiasaan sehat membantu menjaga jantung dan pembuluh darah.</span><ul><li>Melakukan aktivitas fisik secara teratur.</li><li>Mengonsumsi makanan bergizi seimbang.</li><li>Membatasi garam, gula, dan lemak jenuh berlebihan.</li><li>Tidak merokok dan menghindari asap rokok.</li><li>Menjaga berat badan, tidur cukup, dan mengelola stres.</li><li>Melakukan pemeriksaan kesehatan sesuai kebutuhan.</li></ul></div>
+</div>
+<div class="contentbox"><h3>Rangkuman Alur Peredaran Darah</h3><p><b>Peredaran kecil:</b> bilik kanan → paru-paru → serambi kiri.</p><p><b>Peredaran besar:</b> bilik kiri → seluruh tubuh → serambi kanan.</p><p><b>Kunci mengingat:</b> sisi kanan jantung menerima darah dari tubuh dan mengirimkannya ke paru-paru. Sisi kiri menerima darah dari paru-paru dan mengirimkannya ke seluruh tubuh.</p></div>
+<div class="contentbox"><h3>Cek Pemahaman</h3><p>Coba jelaskan dengan kata-katamu sendiri mengapa peredaran darah manusia disebut tertutup dan ganda. Setelah itu, lanjutkan ke simulasi untuk melihat jalur aliran darah.</p><button class="btn btn-primary" onclick="showPage('simulasi')">Coba Simulasi →</button></div>
+</section>
+
+<section id="video" class="page">
+<div class="page-title"><span class="kicker">Belajar Audiovisual</span><h1>Video Pembelajaran</h1><p>Gunakan video sebagai pengantar visual untuk memahami organ dan alur peredaran darah.</p></div>
+<div class="contentbox">
+    <video controls width="100%" style="border-radius: 12px;">
+        <source src="videos.mp4" type="video/mp4">
+        Browser Anda tidak mendukung pemutaran video.
+    </video>
+<p></p></div></div>
+<p style="margin-top:18px"><b>Petunjuk:</b>Video ini merupakan sarana untuk menjadikan pengguna web cardiolearn dapat lebih mengerti mengenai materi yang dibahas</p>
+<div class="notice">,Silahkan menonton video dengan seksama agar bisa lebih mengerti mengenai mengenai materi yang sedang dibahas.</div></div>
+</section>
+
+<section id="simulasi" class="page">
+<div class="page-title"><span class="kicker">Eksplorasi</span><h1>Simulasi Peredaran Darah</h1><p>Pilih jenis peredaran darah, kemudian jalankan langkah demi langkah untuk mengikuti perjalanan darah.</p></div>
+<div class="contentbox">
+<div class="actions" style="margin-top:0"><button class="btn btn-primary" onclick="setFlow('small')">Peredaran Darah Kecil</button><button class="btn btn-outline" onclick="setFlow('large')">Peredaran Darah Besar</button></div>
+<div class="sim-layout" style="margin-top:20px">
+<div class="flow-visual"><div style="font-weight:800;color:var(--navy);margin-bottom:12px" id="flowTitle">Peredaran Darah Kecil</div>
+<div id="flowDiagram"></div><p class="sim-caption">Titik bergerak menggambarkan perjalanan darah pada jalur yang dipilih.</p></div>
+<div><div class="contentbox" style="margin:0;box-shadow:none"><h3 id="stepTitle">Langkah 1 dari 4</h3><p id="stepText">Darah dari bilik kanan dipompa menuju paru-paru melalui arteri pulmonalis.</p><div class="progressbar"><span id="flowProgress" style="width:25%"></span></div><div class="actions"><button class="btn btn-outline" onclick="prevStep()">← Sebelumnya</button><button class="btn btn-primary" onclick="nextStep()">Selanjutnya →</button></div></div><div class="flow-step" id="flowFact"><strong>Perhatikan:</strong> Arteri pulmonalis membawa darah dari jantung menuju paru-paru.</div></div>
+</div></div>
+</section>
+
+<section id="aktivitas" class="page">
+<div class="page-title"><span class="kicker">Belajar Sambil Bermain</span><h1>Game Center</h1><p>Pilih tantangan dan kumpulkan poin. Baca umpan balik setelah menjawab agar konsep yang dipelajari semakin kuat.</p></div>
+<div class="game-grid">
+<div class="game-card"><div class="game-cover">🫀</div><div class="game-body"><h3>Heart Anatomy Challenge</h3><p>Kenali ruang jantung dan pasangkan nama bagian dengan fungsi yang tepat.</p><button class="btn btn-primary btn-small" onclick="openGame('heart')">Mainkan →</button></div></div>
+<div class="game-card"><div class="game-cover">🔄</div><div class="game-body"><h3>Blood Flow Adventure</h3><p>Susun urutan jalur peredaran darah kecil dan besar dengan benar.</p><button class="btn btn-primary btn-small" onclick="openGame('flow')">Mainkan →</button></div></div>
+<div class="game-card"><div class="game-cover">🩸</div><div class="game-body"><h3>Blood Component Match</h3><p>Cocokkan komponen darah dengan fungsi utamanya.</p><button class="btn btn-primary btn-small" onclick="openGame('blood')">Mainkan →</button></div></div>
+</div>
+
+<div id="game-heart" class="game-panel contentbox">
+<div class="game-top"><div><h2>🫀 Heart Anatomy Challenge</h2><p>Pasangkan bagian jantung dengan fungsi yang tepat.</p></div><span class="score-pill" id="heartScore">Skor: 0/4</span></div>
+<div id="heartQuestions"></div><button class="btn btn-primary" onclick="checkHeart()">Periksa Jawaban</button><button class="btn btn-outline" onclick="resetHeart()">Ulangi</button><div id="heartFeedback" class="feedback"></div>
+</div>
+
+<div id="game-flow" class="game-panel contentbox">
+<div class="game-top"><div><h2>🔄 Blood Flow Adventure</h2><p>Seret setiap tahap ke kotak sesuai urutan perjalanan darah kecil.</p></div><span class="score-pill">Tantangan: Peredaran Kecil</span></div>
+<div class="game-columns"><div><h3>Pilihan tahap</h3><div id="dragItems" class="drag-list"></div></div><div><h3>Susun urutannya</h3><div id="dropSlots" class="drop-list"></div></div></div>
+<div class="actions"><button class="btn btn-primary" onclick="checkFlowGame()">Periksa Urutan</button><button class="btn btn-outline" onclick="resetFlowGame()">Acak Ulang</button></div><div id="flowGameFeedback" class="feedback"></div>
+</div>
+
+<div id="game-blood" class="game-panel contentbox">
+<div class="game-top"><div><h2>🩸 Blood Component Match</h2><p>Pilih fungsi yang sesuai untuk setiap komponen darah.</p></div><span class="score-pill">4 Pasangan</span></div>
+<div id="bloodMatches"></div><div class="actions"><button class="btn btn-primary" onclick="checkBlood()">Periksa Pasangan</button><button class="btn btn-outline" onclick="resetBlood()">Ulangi</button></div><div id="bloodFeedback" class="feedback"></div>
+</div>
+</section>
+
+<section id="evaluasi" class="page">
+<div class="page-title"><span class="kicker">Uji Pemahaman</span><h1>Evaluasi Pembelajaran</h1><p>Jawab pertanyaan berikut untuk memeriksa pemahamanmu tentang sistem peredaran darah manusia.</p></div>
+<div class="contentbox"><div class="game-top"><h2 style="margin:0">Kuis CARDIOLEARN</h2><span class="score-pill" id="quizCount">20 Soal</span></div><div id="quizQuestions"></div><button class="btn btn-primary" onclick="submitQuiz()">Lihat Hasil</button><button class="btn btn-outline" onclick="resetQuiz()">Ulangi Kuis</button><div id="quizResult" class="feedback"></div></div>
+</section>
+
+<section id="profil" class="page">
+<div class="page-title"><span class="kicker">Tentang Media</span><h1>Profil CARDIOLEARN</h1><p>Media pembelajaran interaktif untuk membantu peserta didik memahami sistem peredaran darah manusia.</p></div>
+<div class="contentbox two-col"><div><div class="iconbox">♥</div><h2 style="margin-bottom:8px">CARDIOLEARN</h2><p>CARDIOLEARN merupakan media pembelajaran berbasis website pada materi Sistem Peredaran Darah Manusia untuk kelas XI SMA. Media ini menggabungkan materi, video, simulasi, aktivitas edukatif, dan evaluasi dalam satu ruang belajar.</p></div><div><h3>Informasi Media</h3><p><b>Mata Pelajaran:</b> Biologi</p><p><b>Materi:</b> Sistem Peredaran Darah Manusia</p><p><b>Sasaran:</b> Kelas XI SMA / Fase F</p><p><b>Fitur:</b> Materi, video, simulasi, LKPD/game, evaluasi.</p></div></div>
+<div class="contentbox"><h3>Identitas Pengembang</h3><p><b><h2 style="text-align:center; color:#142b45; margin-top:25px;">
+    Tim Pengembang CARDIOLEARN
+</h2>
+
+<div class="developer-container">
+
+    <div class="developer-card">
+        <img src="foto mugi.jpeg" alt="Mugiono Rizkiyanto">
+        <h3>Mugiono Rizkiyanto</h3>
+        <p>Pengembang CARDIOLEARN</p>
+    </div>
+
+    <div class="developer-card">
+        <img src="foto wandah.jpeg" alt="Wandah Fauziah">
+        <h3>Wandah Fauziah</h3>
+        <p>Pengembang CARDIOLEARN</p>
+    </div>
+
+</div></p><p><b>Institusi:</b> <i>Pendidikan Biologi FKIP Universitas Kuningan.</i></p><div class="notice">CARDIOLEARN dikembangkan sebagai media pembelajaran Biologi untuk mendukung pemahaman peserta didik melalui eksplorasi visual dan aktivitas interaktif.</div></div>
+</section>
+</main>
+<footer><b>CARDIOLEARN</b> · Belajar Sistem Peredaran Darah Manusia<br><span>Media pembelajaran Biologi kelas XI SMA</span></footer>
+
+<script>
+const pages=['home','materi','video','simulasi','aktivitas','evaluasi','profil'];
+function showPage(id){pages.forEach(p=>document.getElementById(p).classList.toggle('active',p===id));document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo({top:0,behavior:'smooth'});}
+const flows={
+ small:[
+  ['Darah dari bilik kanan','Darah yang membawa sedikit oksigen dipompa dari bilik kanan menuju paru-paru.','Bilik kanan memulai peredaran darah kecil.'],
+  ['Menuju paru-paru melalui arteri pulmonalis','Darah mengalir melalui arteri pulmonalis menuju paru-paru.','Arteri pulmonalis merupakan pengecualian: membawa darah miskin oksigen.'],
+  ['Pertukaran gas di paru-paru','Di kapiler paru-paru, darah melepaskan karbon dioksida dan mengambil oksigen.','Proses pertukaran gas disebut respirasi eksternal.'],
+  ['Kembali ke jantung melalui vena pulmonalis','Darah kaya oksigen mengalir melalui vena pulmonalis menuju serambi kiri.','Vena pulmonalis membawa darah kaya oksigen.']
+ ],
+ large:[
+  ['Darah dari bilik kiri','Darah kaya oksigen dipompa dari bilik kiri menuju aorta.','Bilik kiri memiliki dinding otot tebal untuk memompa darah ke seluruh tubuh.'],
+  ['Menuju seluruh tubuh melalui aorta','Darah mengalir dari aorta ke arteri dan cabang pembuluh yang lebih kecil.','Aorta merupakan arteri terbesar dalam tubuh.'],
+  ['Pertukaran zat di kapiler tubuh','Oksigen dan zat yang dibutuhkan jaringan berpindah dari darah ke sel; karbon dioksida masuk ke darah.','Kapiler berdinding sangat tipis sehingga mendukung pertukaran zat.'],
+  ['Kembali ke jantung melalui vena kava','Darah dari jaringan tubuh kembali melalui vena menuju vena kava dan masuk ke serambi kanan.','Vena kava superior dan inferior bermuara ke serambi kanan.']
+ ]};
+let flowType='small',flowIndex=0;
+function setFlow(type){flowType=type;flowIndex=0;renderFlow();}
+function renderFlow(){let arr=flows[flowType];document.getElementById('flowTitle').textContent=flowType==='small'?'Peredaran Darah Kecil':'Peredaran Darah Besar';document.getElementById('stepTitle').textContent=`Langkah ${flowIndex+1} dari ${arr.length}`;document.getElementById('stepText').textContent=arr[flowIndex][1];document.getElementById('flowFact').innerHTML='<strong>Perhatikan:</strong> '+arr[flowIndex][2];document.getElementById('flowProgress').style.width=((flowIndex+1)/arr.length*100)+'%';let nodes=flowType==='small'?['Bilik kanan','Paru-paru','Serambi kiri']:['Bilik kiri','Seluruh tubuh','Serambi kanan'];let color=flowType==='small'?'blue':'red';document.getElementById('flowDiagram').innerHTML=`<div class="flow-animation"><svg viewBox="0 0 600 235" role="img" aria-label="Animasi aliran darah bergerak dari jantung ke tujuan dan kembali ke jantung"><path class="route" d="M105 115 C150 20 445 20 495 115 C445 210 150 210 105 115"/><rect class="organ ${color}" x="35" y="78" width="140" height="72" rx="18"/><text x="105" y="108" text-anchor="middle">${nodes[0]}</text><text x="105" y="129" text-anchor="middle">JANTUNG</text><rect class="organ" x="420" y="78" width="145" height="72" rx="18"/><text x="492" y="108" text-anchor="middle">${nodes[1]}</text><text x="492" y="129" text-anchor="middle">${flowType==='small'?'PARU-PARU':'JARINGAN'}</text><circle class="moving ${color}" r="10"><animateMotion dur="5s" repeatCount="indefinite" path="M105 115 C150 20 445 20 495 115 C445 210 150 210 105 115"/></circle><circle class="moving ${color}" r="7"><animateMotion dur="5s" begin="-1.7s" repeatCount="indefinite" path="M105 115 C150 20 445 20 495 115 C445 210 150 210 105 115"/></circle><circle class="moving ${color}" r="5"><animateMotion dur="5s" begin="-3.3s" repeatCount="indefinite" path="M105 115 C150 20 445 20 495 115 C445 210 150 210 105 115"/></circle><text x="300" y="38" text-anchor="middle">${flowType==='small'?'DARAH MENUJU PARU-PARU':'DARAH MENUJU SELURUH TUBUH'}</text><text x="300" y="218" text-anchor="middle">DARAH KEMBALI KE JANTUNG</text></svg></div><div class="flow-node ${color}">${nodes[0]}</div><div class="flow-arrow">↓</div><div class="flow-node">${flowType==='small'?'Arteri pulmonalis → kapiler paru-paru → vena pulmonalis':'Aorta → arteri → kapiler tubuh → vena kava'}</div><div class="flow-arrow">↓</div><div class="flow-node red">${nodes[2]}</div>`;}
+function nextStep(){flowIndex=(flowIndex+1)%4;renderFlow()}function prevStep(){flowIndex=(flowIndex+3)%4;renderFlow()}
+
+function openGame(name){document.querySelectorAll('.game-panel').forEach(p=>p.classList.remove('show'));document.getElementById('game-'+name).classList.add('show');document.getElementById('game-'+name).scrollIntoView({behavior:'smooth',block:'start'});}
+const heartData=[
+ ['Serambi kanan','Menerima darah dari seluruh tubuh melalui vena kava'],
+ ['Serambi kiri','Menerima darah dari paru-paru melalui vena pulmonalis'],
+ ['Bilik kanan','Memompa darah menuju paru-paru'],
+ ['Bilik kiri','Memompa darah menuju seluruh tubuh melalui aorta']
+];
+function initHeart(){document.getElementById('heartQuestions').innerHTML=heartData.map((q,i)=>`<div class="match-row"><b>${q[0]}</b><select id="hq${i}"><option value="">Pilih fungsi...</option>${heartData.map(x=>`<option>${x[1]}</option>`).sort(()=>Math.random()-.5).join('')}</select></div>`).join('');}
+function checkHeart(){let score=0;heartData.forEach((q,i)=>{if(document.getElementById('hq'+i).value===q[1])score++});document.getElementById('heartScore').textContent=`Skor: ${score}/4`;let el=document.getElementById('heartFeedback');el.className='feedback '+(score===4?'good':'bad');el.textContent=score===4?'Hebat! Semua pasangan tepat.':`Kamu benar ${score} dari 4. Pelajari kembali fungsi setiap ruang jantung, lalu coba lagi.`}
+function resetHeart(){initHeart();document.getElementById('heartScore').textContent='Skor: 0/4';document.getElementById('heartFeedback').className='feedback';}
+initHeart();
+
+const flowCorrect=['Bilik kanan','Arteri pulmonalis','Paru-paru','Vena pulmonalis','Serambi kiri'];
+function resetFlowGame(){let shuffled=[...flowCorrect].sort(()=>Math.random()-.5);document.getElementById('dragItems').innerHTML=shuffled.map((x,i)=>`<div class="drag-item" draggable="true" data-value="${x}">${x}<span>⠿</span></div>`).join('');document.getElementById('dropSlots').innerHTML=flowCorrect.map((x,i)=>`<div class="drop-slot" data-index="${i}">Tahap ${i+1} — lepaskan di sini</div>`).join('');document.getElementById('flowGameFeedback').className='feedback';setupDrag();}
+function setupDrag(){let dragged=null;document.querySelectorAll('.drag-item').forEach(el=>{el.addEventListener('dragstart',()=>{dragged=el;});});document.querySelectorAll('.drop-slot').forEach(slot=>{slot.addEventListener('dragover',e=>{e.preventDefault();slot.classList.add('over')});slot.addEventListener('dragleave',()=>slot.classList.remove('over'));slot.addEventListener('drop',e=>{e.preventDefault();slot.classList.remove('over');if(dragged){let old=slot.querySelector('.drag-item');if(old)document.getElementById('dragItems').appendChild(old);slot.innerHTML='';slot.classList.add('filled');slot.appendChild(dragged);}});});}
+function checkFlowGame(){let vals=[...document.querySelectorAll('.drop-slot')].map(s=>s.querySelector('.drag-item')?.dataset.value||'');let score=vals.filter((v,i)=>v===flowCorrect[i]).length;let el=document.getElementById('flowGameFeedback');el.className='feedback '+(score===5?'good':'bad');el.textContent=score===5?'Sempurna! Kamu berhasil menyusun peredaran darah kecil.':'Benar '+score+'/5. Ingat: bilik kanan → arteri pulmonalis → paru-paru → vena pulmonalis → serambi kiri.'}
+resetFlowGame();
+
+const bloodData=[['Plasma darah','Mengangkut nutrisi, hormon, dan zat terlarut'],['Eritrosit','Mengangkut oksigen dengan bantuan hemoglobin'],['Leukosit','Berperan dalam pertahanan tubuh'],['Trombosit','Berperan dalam proses pembekuan darah']];
+function resetBlood(){document.getElementById('bloodMatches').innerHTML=bloodData.map((x,i)=>`<div class="match-row"><b>${x[0]}</b><select id="bq${i}"><option value="">Pilih fungsi...</option>${bloodData.map(y=>`<option>${y[1]}</option>`).sort(()=>Math.random()-.5).join('')}</select></div>`).join('');document.getElementById('bloodFeedback').className='feedback';}
+function checkBlood(){let n=bloodData.filter((x,i)=>document.getElementById('bq'+i).value===x[1]).length;let el=document.getElementById('bloodFeedback');el.className='feedback '+(n===4?'good':'bad');el.textContent=n===4?'Luar biasa! Semua komponen darah cocok dengan fungsinya.':`Jawaban benar ${n}/4. Ingat kembali peran plasma, eritrosit, leukosit, dan trombosit.`}
+resetBlood();
+
+const quiz=[
+ ['Komponen darah yang berperan mengangkut oksigen adalah…',['Leukosit','Eritrosit','Trombosit','Plasma'],1,'Eritrosit mengandung hemoglobin yang mengikat oksigen.'],
+ ['Ruang jantung yang memompa darah ke paru-paru adalah…',['Serambi kanan','Serambi kiri','Bilik kanan','Bilik kiri'],2,'Bilik kanan memompa darah menuju paru-paru melalui arteri pulmonalis.'],
+ ['Pembuluh yang membawa darah dari paru-paru menuju serambi kiri adalah…',['Aorta','Vena pulmonalis','Arteri pulmonalis','Vena kava'],1,'Vena pulmonalis membawa darah kaya oksigen dari paru-paru ke serambi kiri.'],
+ ['Urutan awal peredaran darah besar adalah…',['Bilik kiri → aorta','Bilik kanan → arteri pulmonalis','Serambi kanan → vena kava','Paru-paru → arteri pulmonalis'],0,'Peredaran darah besar dimulai ketika bilik kiri memompa darah ke aorta.'],
+ ['Tempat utama pertukaran zat antara darah dan jaringan adalah…',['Aorta','Vena kava','Kapiler','Arteri pulmonalis'],2,'Dinding kapiler yang tipis memungkinkan pertukaran gas, nutrisi, dan sisa metabolisme.'],
+ ['Bagian cair darah yang mengangkut berbagai zat terlarut disebut…',['Plasma','Eritrosit','Leukosit','Trombosit'],0,'Plasma merupakan bagian cair darah yang membawa nutrisi, hormon, protein, dan zat terlarut.'],
+ ['Sel darah putih memiliki fungsi utama untuk…',['Mengangkut oksigen','Melawan kuman dan benda asing','Membekukan darah','Mengangkut karbon dioksida saja'],1,'Leukosit berperan dalam sistem pertahanan tubuh.'],
+ ['Komponen darah yang membantu proses pembekuan saat terluka adalah…',['Eritrosit','Plasma saja','Trombosit','Leukosit'],2,'Trombosit membantu pembentukan sumbat dan proses pembekuan darah.'],
+ ['Katup jantung berfungsi untuk…',['Mempercepat pembentukan sel darah','Mencegah aliran darah berbalik','Menghasilkan oksigen','Menyaring seluruh racun'],1,'Katup menjaga aliran darah tetap satu arah.'],
+ ['Ruang jantung yang menerima darah dari seluruh tubuh melalui vena kava adalah…',['Serambi kanan','Serambi kiri','Bilik kanan','Bilik kiri'],0,'Serambi kanan menerima darah yang kembali dari jaringan tubuh.'],
+ ['Pembuluh darah yang membawa darah keluar dari jantung disebut…',['Vena','Kapiler','Arteri','Venula'],2,'Arteri selalu membawa darah menjauhi jantung, apa pun kadar oksigennya.'],
+ ['Ciri umum vena dibandingkan arteri adalah…',['Dinding selalu lebih tebal','Membawa darah menuju jantung','Selalu membawa darah kaya oksigen','Tidak pernah memiliki katup'],1,'Vena membawa darah menuju jantung dan banyak vena memiliki katup.'],
+ ['Peredaran darah kecil berakhir ketika darah masuk ke…',['Bilik kanan','Aorta','Serambi kiri','Serambi kanan'],2,'Darah dari paru-paru kembali ke serambi kiri melalui vena pulmonalis.'],
+ ['Pembuluh terbesar yang keluar dari bilik kiri adalah…',['Aorta','Vena kava','Arteri pulmonalis','Vena pulmonalis'],0,'Aorta menyalurkan darah dari bilik kiri ke seluruh tubuh.'],
+ ['Pertukaran gas di paru-paru terjadi antara darah dan…',['Alveolus','Lambung','Ginjal','Otot rangka'],0,'Kapiler di sekitar alveolus menjadi tempat pertukaran oksigen dan karbon dioksida.'],
+ ['Fase ketika otot jantung berkontraksi untuk memompa darah disebut…',['Diastol','Sistol','Difusi','Filtrasi'],1,'Sistol adalah fase kontraksi jantung untuk mendorong darah keluar.'],
+ ['Tekanan darah tinggi yang berlangsung terus-menerus disebut…',['Anemia','Hipertensi','Hemofilia','Leukemia'],1,'Hipertensi adalah kondisi tekanan darah yang terus-menerus tinggi.'],
+ ['Anemia berkaitan dengan berkurangnya kemampuan darah untuk…',['Membawa oksigen','Mencerna makanan','Menghasilkan empedu','Menyaring urine'],0,'Anemia sering berkaitan dengan rendahnya hemoglobin sehingga pengangkutan oksigen berkurang.'],
+ ['Penumpukan plak pada dinding arteri disebut…',['Aterosklerosis','Diastol','Koagulasi','Respirasi'],0,'Aterosklerosis dapat menyempitkan arteri dan menghambat aliran darah.'],
+ ['Kebiasaan yang membantu menjaga kesehatan sistem peredaran darah adalah…',['Merokok','Jarang bergerak','Aktivitas fisik teratur dan makan seimbang','Mengonsumsi garam berlebihan'],2,'Aktivitas fisik teratur dan pola makan seimbang membantu menjaga kesehatan jantung serta pembuluh darah.']
+]
+function renderQuiz(){document.getElementById('quizQuestions').innerHTML=quiz.map((q,i)=>`<div class="question"><b>${i+1}. ${q[0]}</b>${q[1].map((o,j)=>`<label class="option"><input type="radio" name="quiz${i}" value="${j}"> ${String.fromCharCode(65+j)}. ${o}</label>`).join('')}</div>`).join('');}
+function submitQuiz(){let score=0,answered=0;let review=[];quiz.forEach((q,i)=>{let v=document.querySelector(`input[name="quiz${i}"]:checked`);let ok=!!v&&+v.value===q[2];if(v)answered++;if(ok)score++;review.push(`<p><b>${i+1}. ${ok?'Benar':'Perlu dipelajari'}:</b> ${q[3]}</p>`);});let el=document.getElementById('quizResult');el.className='feedback '+(score>=15?'good':'bad');el.innerHTML=`Hasil: <b>${score} dari ${quiz.length} benar</b> (${Math.round(score/quiz.length*100)}%). Kamu menjawab ${answered} dari ${quiz.length} soal.<hr>${review.join('')}`;}
+function resetQuiz(){renderQuiz();document.getElementById('quizResult').className='feedback';}
+renderQuiz();
+</script>
+<!-- MUSIK LATAR CARDIOLEARN -->
+<audio id="backgroundMusic" loop>
+    <source src="lagu hivi.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton" onclick="toggleMusic()">
+    🎵 Nyalakan Musik
+</button>
+<script>
+const music = document.getElementById("backgroundMusic");
+const musicButton = document.getElementById("musicButton");
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        musicButton.innerHTML = "🔊 Matikan Musik";
+    } else {
+        music.pause();
+        musicButton.innerHTML = "🎵 Nyalakan Musik";
+    }
+}
+
+window.addEventListener("load", function() {
+    music.play().then(() => {
+        musicButton.innerHTML = "🔊 Matikan Musik";
+    }).catch(() => {
+        musicButton.innerHTML = "🎵 Nyalakan Musik";
+    });
+});
+</script>
+</body></html>
